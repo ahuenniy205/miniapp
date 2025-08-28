@@ -1,4 +1,4 @@
-let balance = 100; // стартовый баланс для демо
+let balance = 100;
 const balanceEl = document.getElementById("balance");
 const depositBtn = document.getElementById("depositBtn");
 const withdrawBtn = document.getElementById("withdrawBtn");
@@ -9,7 +9,7 @@ const resultEl = document.getElementById("result");
 
 balanceEl.textContent = balance;
 
-// Демо депозит
+// Пополнение баланса
 depositBtn.onclick = () => {
   let amount = parseInt(prompt("Сколько TON пополнить?"));
   if(amount > 0) {
@@ -19,7 +19,7 @@ depositBtn.onclick = () => {
   }
 }
 
-// Демо вывод
+// Вывод средств
 withdrawBtn.onclick = () => {
   let amount = parseInt(prompt("Сколько TON вывести?"));
   if(amount > 0 && amount <= balance) {
@@ -43,7 +43,7 @@ playBtn.onclick = () => {
 
   // Генерация случайного числа (0-36)
   let rouletteNumber = Math.floor(Math.random() * 37);
-  let rouletteColor = (rouletteNumber % 2 === 0) ? "black" : "red"; // простая логика
+  let rouletteColor = (rouletteNumber % 2 === 0) ? "black" : "red";
 
   if(rouletteColor === betChoice) {
     balance += betAmount;
